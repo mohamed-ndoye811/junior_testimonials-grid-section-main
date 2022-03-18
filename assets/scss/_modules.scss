@@ -57,6 +57,10 @@
 				border-box;
 			background-size: cover;
 			z-index: 0;
+
+			@media screen and (min-width: 1024px) {
+				right: rem(80);
+			}
 		}
 	}
 

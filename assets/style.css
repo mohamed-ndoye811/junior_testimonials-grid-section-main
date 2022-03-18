@@ -146,6 +146,11 @@ img {
   background-size: cover;
   z-index: 0;
 }
+@media screen and (min-width: 1024px) {
+  .testimonial:first-of-type::after {
+    right: 6.1538461538rem;
+  }
+}
 .testimonial--violet {
   background-color: #7541c8;
   color: white;

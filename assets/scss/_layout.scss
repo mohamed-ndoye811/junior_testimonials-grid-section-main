@@ -18,7 +18,8 @@
 	padding: rem(70) rem(25);
 	display: flex;
 	flex-direction: column;
-	gap: rem(25);
+	gap: rem(30);
+	max-width: rem(1110);
 }
 
 @media screen and (min-width: 1024px) {
@@ -27,6 +28,6 @@
 		display: grid;
 		grid-template-columns: repeat(4, rem(255));
 		grid-template-rows: repeat(2, rem(282));
-		row-gap: rem(30);
+		height: rem(572);
 	}
 }

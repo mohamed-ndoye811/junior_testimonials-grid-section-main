@@ -1,0 +1,108 @@
+.testimonial {
+	width: 100%;
+	padding: rem(25) rem(32);
+	display: flex;
+	flex-direction: column;
+	gap: rem(20);
+	background-color: $white;
+	border-radius: rem(5);
+	position: relative;
+	box-shadow: 5px 11px 52px 0px rgba(0, 0, 0, 0.15);
+
+	&__author {
+		display: flex;
+		align-items: center;
+		gap: rem(15);
+
+		.avatar {
+			border-radius: 999rem;
+			aspect-ratio: 1;
+			width: rem(32);
+			border-width: rem(2);
+			object-fit: cover;
+			display: grid;
+			place-content: center;
+
+			&--border {
+				border-style: solid;
+			}
+		}
+
+		.infos {
+			font-size: rem(12);
+			letter-spacing: -2%;
+
+			&__distinction {
+				opacity: 0.3;
+				font-weight: 400;
+				letter-spacing: -9.5%;
+			}
+		}
+	}
+
+	/* ---- Quote implementation */
+	* {
+		z-index: 1;
+	}
+
+	&:first-of-type {
+		&::after {
+			content: "";
+			width: rem(104);
+			aspect-ratio: 1;
+			position: absolute;
+			right: rem(20);
+			top: 0;
+			background: url("../images/bg-pattern-quotation.svg") center no-repeat
+				border-box;
+			background-size: cover;
+			z-index: 0;
+		}
+	}
+
+	/* ---- Colors modifiers */
+	&--violet {
+		background-color: $moderate-violet;
+		color: $white;
+
+		.testimonial__author {
+			.avatar {
+				border-color: rgba($color: $white, $alpha: 0.3);
+			}
+		}
+	}
+
+	&--dark-grayish-blue {
+		background-color: $very-dark-grayish-blue;
+		color: $white;
+	}
+
+	&--dark-blackish-blue {
+		background-color: $very-dark-blackish-blue;
+		color: $white;
+
+		.testimonial__author {
+			.avatar {
+				background-color: $moderate-violet;
+				border-color: $moderate-violet;
+			}
+		}
+	}
+
+	&:nth-of-type(1) {
+		grid-column: span 2;
+	}
+
+	&:nth-of-type(4) {
+		grid-column: 2 / span 2;
+	}
+
+	&:nth-of-type(3) {
+		grid-column: 1;
+	}
+
+	&:last-of-type {
+		grid-row: 1 / span 2;
+		grid-column: 4;
+	}
+}

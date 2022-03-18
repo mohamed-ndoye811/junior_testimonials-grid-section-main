@@ -1,0 +1,62 @@
+:root {
+	font-size: $root-font-size * 1px;
+}
+
+@media screen and (min-width: 1024px) {
+	:root {
+		font-size: 15px;
+	}
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-family: "Barlow Semi Condensed", sans-serif;
+	background-color: $light-grayish-blue;
+	color: $very-dark-grayish-blue;
+}
+
+@media screen and (min-width: 1024px) {
+	body {
+		display: grid;
+		place-content: center;
+	}
+}
+
+h2 {
+	font-size: rem(21);
+	line-height: rem(25);
+	font-weight: 500;
+	letter-spacing: -6%;
+}
+
+p {
+	opacity: 0.45;
+	font-weight: 400;
+	letter-spacing: -6%;
+	line-height: rem(17.28);
+	font-size: rem(12);
+}
+
+@media screen and (min-width: 1024px) {
+	h2 {
+		font-size: rem(20);
+	}
+
+	p {
+		font-size: rem(13);
+	}
+}
+
+img {
+	width: 100%;
+	aspect-ratio: 1;
+	border-radius: inherit;
+}
